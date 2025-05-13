@@ -6,44 +6,67 @@
 
 body {
     background-color: #0d0d0d;
-    font-family: Arial, sans-serif;
 }
 
 nav {
+    font-family: sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 24px;
-    background-color: #0d0d0d;
+    padding: 10px 16px;
+    background-color: #10101483;
     color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-
 .nav-l,
 .nav-r {
     display: flex;
     align-items: center;
 }
 
-.nav-l img {
-    height: 28px;
-    margin-right: 30px;
+.logoimg{
+    height: 32px;
+    width: 32px;
+    margin-right: 50px;
 }
 
 .nav-l a {
     color: white;
     text-decoration: none;
-    margin-right: 24px;
+    margin-right: 30px;
     font-size: 14px;
+    
 }
 
 .nav-l a:hover {
-    color: #ccc;
+    color: gray;
 }
 
 .about-m {
+    display: flex;
+    align-items: center;
     color: white;
-    width: 100%;
-    background-color: transparent;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #0d0d0d;
+    outline: none;
+    box-shadow: none;
+    border: none;
+
+}
+.about-m a {
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+    
+}
+
+.about-m svg {
+    width: 12px;
+    height: 12px;
+    fill: white;
 }
 
 .nav-r button {
@@ -53,18 +76,25 @@ nav {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    
 }
 
 .lang-btn {
-    background: none;
-    color: white;
-    font-size: 18px;
+    background-color: #10101483;
+    fill: white;
+    width: 50px;
+    height: 32px;
+    padding: 4px;
+}
+.lang-btn:hover {
+    fill: #333;
 }
 
 .signin-btn {
-    background-color: #1a1a1a;
-    color: white;
-    width: 100%;
+    background-color: #FFFFFF26;
+    color: #FFF;
+    width: 93px;
+    padding: 4px 12px;
 
 }
 
@@ -73,13 +103,68 @@ nav {
 }
 
 .download-btn {
-    background-color: #007bff;
+    background-color: #26BBFF;
     color: blacks;
-    width: 100%;
+    width: 93px;
+    padding: 4px 12px;
 }
 
 .download-btn:hover {
     background-color: #006ae6;
+}
+
+.hero-section {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    position: relative;
+    box-sizing: border-box;
+    
+}
+
+.scroll-content {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 90s linear infinite;
+}
+
+.hero-image {
+    width: 844px;
+    height: 900px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    
+}
+
+.fortnite {
+    position: relative; 
+    
+}
+
+.fortnite a {
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    text-decoration: none;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 
@@ -114,25 +199,37 @@ hr {
     unicode-bidi: isolate;
     overflow: hidden;
     height: 0.0625rem;
-    margin: 0px;
-    padding: 0px;
+    margin: 30px;
     background: var(--color-border-subtle, rgba(255, 255, 255, .15));
     border: 0px;
 }
 .footer {
     background-color: #18181c;
-    padding: 40px 20px;
+    padding: 80px 64px;
+}
+.social{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 40px;
 }
 .footer img{
-    margin-right: 30px;
+    margin-left: 35px;
+}
+.footer svg{
+    width: 32px;
+    fill: #ffffff99;
 }
 .footer-content {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    gap: 30px;
-    max-width: 1200px;
-    margin: auto;
+    gap: 2.5rem;
+    padding: 80px 64px;
+    margin-bottom: 100px;
+    width: 1493px;
+    height: 444px;
+    font-family: Inter, sans-serif;
 }
 .footer-content li:hover {
     color: gray;
@@ -140,12 +237,12 @@ hr {
 
 .column {
     flex: 1;
-    min-width: 200px;
+    min-width: 245px;
 }
 
 .column h2 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 25px;
     color: white;
 }
 
@@ -153,17 +250,21 @@ hr {
     list-style: none;
     padding: 0;
     margin: 0;
+    font-size: 14px;
+    font-style: Inter ,sans-serif;
 }
 
 .column ul li {
-    margin: 5px 0;
+    margin: 6px 0;
+    padding: 6px;
     color: #ccc;
 }
 .footer-bottom {
     margin-top: 40px;
-    text-align: left;
-    font-size: 0.9rem;
-    width: 1000px;
+    margin-left: 40px;
+    font-size: 12px;
+    width: 840px;
+    height: 114px;
     color: #FFFFFFA6;
 }
 
@@ -180,5 +281,6 @@ hr {
 }
 
 .footer-links a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: gray;
 }
