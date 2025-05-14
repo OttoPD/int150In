@@ -9,15 +9,40 @@ body {
 }
 
 nav {
-    font-family: sans-serif;
+    font-family: Inter, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 16px;
-    background-color: #10101483;
     color: white;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: var(--color-background-transparent-default, rgba(16, 16, 20, .7));
+    backdrop-filter: var(--effect-material-blur, blur(50px));
+}
+.nav-logo{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+.nav-logo svg{
+    width: 12px;
+    height: 12px;
+    fill: white;
+    margin-left: 5px;
+    margin-right: 42px;
+}
+.nav-logo img:hover{
+    fill: #333;
 }
 .nav-l,
 .nav-r {
@@ -25,10 +50,10 @@ nav {
     align-items: center;
 }
 
-.logoimg{
+.logoimg {
     height: 32px;
     width: 32px;
-    margin-right: 50px;
+    margin-right: 5px;
 }
 
 .nav-l a {
@@ -50,17 +75,17 @@ nav {
     text-decoration: none;
     font-size: 14px;
     cursor: pointer;
-    background-color: #0d0d0d;
-    outline: none;
+    background-color: transparent; 
     box-shadow: none;
     border: none;
 
 }
+
 .about-m a {
     color: white;
     text-decoration: none;
     margin-right: 5px;
-    
+
 }
 
 .about-m svg {
@@ -76,16 +101,17 @@ nav {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    
+
 }
 
 .lang-btn {
-    background-color: #10101483;
+    background-color: transparent; 
     fill: white;
     width: 50px;
     height: 32px;
     padding: 4px;
 }
+
 .lang-btn:hover {
     fill: #333;
 }
@@ -119,29 +145,40 @@ nav {
     margin-top: 20px;
     position: relative;
     box-sizing: border-box;
-    
+
 }
 
-.scroll-content {
+.scroll-c {
     display: flex;
     width: max-content;
     animation: scroll-left 90s linear infinite;
 }
 
+.scroll-c p {
+    display: flex;
+    text-transform: uppercase;
+    color: #FFF;
+    justify-content: center;
+    font-family: Brutal Bold, sans-serif;
+    font-size: 3.8em;
+    font-weight: 500;
+    line-height: .875;
+    text-align: left;
+}
+
 .hero-image {
-    width: 844px;
-    height: 900px;
-    flex-shrink: 0;
+    width: 800px;
+    height: 100vh;
+    left: 512px;
+    top: 0;
+    display: flex;
+    overflow: hidden;
+    background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
-    
 }
 
-.fortnite {
-    position: relative; 
-    
-}
 
 .fortnite a {
     background: none;
@@ -158,10 +195,12 @@ nav {
     bottom: 50px;
     left: 50px;
 }
+
 @keyframes scroll-left {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
@@ -196,34 +235,38 @@ hr {
     margin-block-end: 0.5em;
     margin-inline-start: auto;
     margin-inline-end: auto;
-    unicode-bidi: isolate;
     overflow: hidden;
     height: 0.0625rem;
     margin: 30px;
     background: var(--color-border-subtle, rgba(255, 255, 255, .15));
     border: 0px;
 }
+
 .footer {
+    width: 100%;
     background-color: #18181c;
     padding: 80px 64px;
 }
-.social{
+
+.footer-top {
     display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 40px;
+    justify-content: space-between;
 }
-.footer img{
-    margin-left: 35px;
-}
-.footer svg{
-    width: 32px;
+
+.logo-social {
+    width: 210px;
     fill: #ffffff99;
+    gap: 25px;
+    display: flex;
 }
+
+.logo-social svg {
+    width: 32px;
+}
+
 .footer-content {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
     gap: 2.5rem;
     padding: 80px 64px;
     margin-bottom: 100px;
@@ -231,6 +274,7 @@ hr {
     height: 444px;
     font-family: Inter, sans-serif;
 }
+
 .footer-content li:hover {
     color: gray;
 }
@@ -248,10 +292,8 @@ hr {
 
 .column ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     font-size: 14px;
-    font-style: Inter ,sans-serif;
+    font-style: Inter, sans-serif;
 }
 
 .column ul li {
@@ -259,6 +301,7 @@ hr {
     padding: 6px;
     color: #ccc;
 }
+
 .footer-bottom {
     margin-top: 40px;
     margin-left: 40px;
@@ -271,7 +314,6 @@ hr {
 .footer-links {
     margin-top: 50px;
     margin-right: 60px;
-
 }
 
 .footer-links a {
