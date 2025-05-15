@@ -8,11 +8,10 @@ body {
     background-color: #0d0d0d;
 }
 
-nav {
+.navbar {
     font-family: Inter, sans-serif;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 10px 16px;
     color: white;
     width: 100%;
@@ -41,11 +40,10 @@ nav {
     margin-left: 5px;
     margin-right: 42px;
 }
-.nav-logo img:hover{
+.nav-logo:hover{
     fill: #333;
 }
-.nav-l,
-.nav-r {
+.nav-l,.nav-r {
     display: flex;
     align-items: center;
 }
@@ -136,7 +134,7 @@ nav {
 }
 
 .download-btn:hover {
-    background-color: #006ae6;
+    background-color: #72d3ff;
 }
 
 .hero-section {
@@ -152,20 +150,24 @@ nav {
     display: flex;
     width: max-content;
     animation: scroll-left 90s linear infinite;
+    
 }
 
 .scroll-c p {
-    display: flex;
     text-transform: uppercase;
     color: #FFF;
     justify-content: center;
     font-family: Brutal Bold, sans-serif;
     font-size: 3.8em;
-    font-weight: 500;
+    font-weight: 600;
     line-height: .875;
     text-align: left;
+    margin-left: 1.5%;
 }
+.scroll-c div{
+    display: flex;
 
+}
 .hero-image {
     width: 800px;
     height: 100vh;
@@ -178,9 +180,12 @@ nav {
     background-repeat: no-repeat;
     object-fit: cover;
 }
+.hero-image~*{
+    position: absolute;
+    z-index: 100;
+    top: 70%;}
 
-
-.fortnite a {
+/* .fortnite a {
     background: none;
     border: 1px solid #fff;
     border-radius: 0;
@@ -194,7 +199,7 @@ nav {
     position: absolute;
     bottom: 50px;
     left: 50px;
-}
+} */
 
 @keyframes scroll-left {
     0% {
@@ -251,6 +256,7 @@ hr {
 .footer-top {
     display: flex;
     justify-content: space-between;
+    margin-left: 35px;
 }
 
 .logo-social {
