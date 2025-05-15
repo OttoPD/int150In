@@ -78,6 +78,20 @@ body {
     border: none;
 
 }
+.wrap-dropdow{
+    position: relative;
+}
+.dropdown{
+    display: none;
+    background-color: #0d0d0d;
+
+}
+.about-m:hover ~ .dropdown,.dropdown:hover a{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+}
 
 .about-m a {
     color: white;
@@ -136,6 +150,8 @@ body {
 .download-btn:hover {
     background-color: #72d3ff;
 }
+
+
 
 .hero-section {
     width: 100%;
@@ -210,28 +226,6 @@ body {
         transform: translateX(-50%);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 hr {
