@@ -80,11 +80,20 @@ body {
 }
 .wrap-dropdow{
     position: relative;
+    
 }
 .dropdown{
     display: none;
-    background-color: #0d0d0d;
-
+    background-color: #333;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 180px;
+    column-gap: 0px;
+    inset-block-start: 70px;
+}
+.dropdown a{
+    padding: 10px 12px;
 }
 .about-m:hover ~ .dropdown,.dropdown:hover a{
     display: flex;
