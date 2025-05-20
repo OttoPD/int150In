@@ -93,9 +93,8 @@ body {
     padding: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     width: 180px;
-    column-gap: 0px;
+    column-gap: 1px;
     inset-block-start: 70px;
-    z-index: 1000;
 }
 
 .dropdown a {
@@ -184,25 +183,7 @@ body {
     box-sizing: border-box;
 
 }
-.nextArrow{
-    bottom: 0;
-    cursor: pointer;
-    display: table;
-    height: 100px;
-    position: absolute;
-    top: 50%;
-    width: 100px;
-    z-index: 999;
-}
-.icon-arrow-right{
-    width: 28px;
-    height: 28px;
-    font-family: ue-icomoon !important;
-    position: relative;
-    vertical-align: middle;
-    font-weight: bolder;
-    z-index: 1000;
-}
+
 .scroll-c {
     display: flex;
     width: max-content;
@@ -247,9 +228,11 @@ body {
     transition: 0.2s;
 
 }
-.homepageepic a{
+
+.homepageepic a {
     display: none;
 }
+
 .homepageepic {
     background-image: url(./image/homepageepic.png);
 }
@@ -275,9 +258,7 @@ body {
 }
 
 
-.fortnite a {
-    display: none;
-}
+
 
 @keyframes scroll-left {
     0% {
@@ -351,9 +332,11 @@ hr {
 hr.phone-hr {
     display: none;
 }
-.column-header{
+
+.column-header {
     display: none;
 }
+
 .column {
     min-width: 245px;
 }
@@ -433,6 +416,9 @@ hr.phone-hr {
 @media screen and (max-width: 400px) {
     .navbar {
         display: flex;
+        align-items: center;
+        padding: 0 16px;
+        height: 60px;
     }
 
     .navbar a {
@@ -471,10 +457,11 @@ hr.phone-hr {
         left: 80px;
         font-size: 2em;
     } */
-hr{
-   display: none;
-    
-}
+    hr {
+        display: none;
+
+    }
+
     .menu-phone {
         display: inline-block;
         width: 1.5rem;
@@ -518,7 +505,7 @@ hr{
     }
 
     .logo-footer {
-        margin-top: 100px;
+        margin-top: 50px;
     }
 
     .logo-social {
@@ -526,6 +513,7 @@ hr{
         margin-top: 30px;
         gap: 1em;
         left: 0;
+        margin-bottom: 20px;
     }
 
     .footer h2 {
@@ -538,18 +526,23 @@ hr{
         flex-direction: column;
         flex-wrap: wrap;
         gap: 0.5rem;
-        padding: 20px 20px;
+        padding: 0;
         width: 100%;
         height: auto;
-        
+
     }
 
     hr.phone-hr {
-        display: flex;
-        margin: 10px;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.15);
+        border: none;
+        margin: 10px 0;
     }
 
     .column {
+
         min-width: unset;
         width: 100%;
     }
